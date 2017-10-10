@@ -1,2 +1,5 @@
 MOV A, 09
-MOV B, 09
+MOV B, 05
+MOV C, A
+MOV A, B
+MOV B, C
