@@ -1,0 +1,8 @@
+JMP griha 
+DB 09
+DB 09 
+griha: 
+MOV A, 09
+MOV B, 09
+ADD A, B 
+MOV B, 0
