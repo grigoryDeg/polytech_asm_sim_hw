@@ -1,0 +1,10 @@
+JMP proga 
+DB 5
+proga: 
+mov a, 5
+mov b, a 
+griha: 
+DEC B 
+MUL B 
+CMP B,1 
+JNE griha
