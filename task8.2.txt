@@ -1,0 +1,36 @@
+JMP grisha
+intro:
+DB "6" 
+DB "3" 
+DB "4" 
+DB "1" 
+DB "9" 
+DB "2" 
+DB 0 
+grisha: 
+MOV D, 232 
+MOV C, intro 
+MOV A, [C] 
+MOV [D], A 
+
+
+cmpmaster: 
+cmp A, 0 
+JE stop 
+CMP A, [C+1] 
+JA print1 
+JB print2 
+
+
+print2: 
+inc C 
+JMP cmpmaster 
+
+print1: 
+MOV [D], A 
+inc C 
+MOV A, [C] 
+JMP cmpmaster 
+
+stop: 
+hlt
